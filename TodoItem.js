@@ -6,7 +6,8 @@ function TodoItem(props) {
       <input
         type="checkbox"
         checked={props.data.completed}
-        onChange={() => console.log("checked")}
+        // onChange recives the event object in the function and then calls handleChange where we pass the id
+        onChange={() => props.handleChange(props.data.id)}
       />
       <p>{props.data.text}</p>
     </div>
